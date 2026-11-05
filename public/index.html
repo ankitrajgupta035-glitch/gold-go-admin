@@ -347,7 +347,7 @@
         const data = await res.json();
         if (!data.success) {
           if (res.status === 401) {
-            alert('Session expired. Please log in again.');
+            alert('Session expired due to server sleep. Please log in again.');
             localStorage.removeItem('adminToken');
             location.reload();
           } else {
